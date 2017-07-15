@@ -9,7 +9,7 @@ module.exports = function(app, passport,express,path,jwt) {
     })); */
    
     
-    app.post('/login',authjwt.authenticate)
+    app.post('/login',authjwt.generateToken)
 
     app.get('/authenticated',authjwt.isLoggedIn,function(req,res){
         console.log('We have a token . Authenticated ');
